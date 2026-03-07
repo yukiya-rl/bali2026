@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="ja">
 <head>
 <meta charset="UTF-8">
@@ -12,129 +13,141 @@
 body{background:var(--deep);color:var(--sand);font-family:'Noto Sans JP',sans-serif;font-weight:300;overflow-x:hidden;-webkit-font-smoothing:antialiased}
 
 /* HERO */
-.hero{min-height:100svh;position:relative;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:0 24px 0;overflow:hidden}
+.hero{min-height:100svh;position:relative;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:0 24px 40px;overflow:hidden}
 .hero-bg{position:absolute;inset:0;background:url('https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=1200&q=80') center 30%/cover;animation:zoomBg 14s ease-out forwards}
 @keyframes zoomBg{from{transform:scale(1.06)}to{transform:scale(1)}}
 .hero-ov{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(8,16,13,.3) 0%,rgba(8,16,13,.05) 38%,rgba(8,16,13,.78) 75%,rgba(8,16,13,.97) 100%)}
 .hero-logo{position:absolute;top:26px;left:50%;transform:translateX(-50%);height:26px;filter:brightness(0) invert(1);opacity:0;animation:fadeDown .8s ease .3s forwards}
 .hero-content{position:relative;z-index:2;text-align:center;width:100%;max-width:480px}
-.hero-eye{font-size:10px;letter-spacing:.4em;color:var(--gold);text-transform:uppercase;opacity:0;animation:fadeUp .8s ease .5s forwards;margin-bottom:12px}
-.hero-title{font-family:'Cormorant Garamond',serif;font-size:clamp(70px,21vw,110px);font-weight:300;line-height:.88;letter-spacing:-.02em;color:var(--white);opacity:0;animation:fadeUp 1s ease .7s forwards}
-.hero-title em{font-style:italic;color:var(--gold);font-family:'Playfair Display',serif}
+.hero-eye{font-size:10px;letter-spacing:.4em;color:var(–gold);text-transform:uppercase;opacity:0;animation:fadeUp .8s ease .5s forwards;margin-bottom:12px}
+.hero-title{font-family:'Cormorant Garamond',serif;font-size:clamp(70px,21vw,110px);font-weight:300;line-height:.88;letter-spacing:-.02em;color:var(–white);opacity:0;animation:fadeUp 1s ease .7s forwards}
+.hero-title em{font-style:italic;color:var(–gold);font-family:'Playfair Display',serif}
 .hero-meta{margin-top:18px;opacity:0;animation:fadeUp .8s ease 1s forwards}
 .hero-meta p{font-size:11px;letter-spacing:.18em;color:rgba(245,237,224,.6);margin-bottom:4px}
-.hero-date{font-family:'Cormorant Garamond',serif;font-size:18px;color:var(--white);letter-spacing:.06em}
-.hero-pill{display:inline-flex;align-items:center;gap:8px;margin-top:18px;border:1px solid rgba(201,169,110,.38);border-radius:100px;padding:8px 18px;font-size:11px;letter-spacing:.12em;color:var(--gold);opacity:0;animation:fadeUp .8s ease 1.2s forwards}
+.hero-date{font-family:'Cormorant Garamond',serif;font-size:18px;color:var(–white);letter-spacing:.06em}
+.hero-pill{display:inline-flex;align-items:center;gap:8px;margin-top:18px;border:1px solid rgba(201,169,110,.38);border-radius:100px;padding:8px 18px;font-size:11px;letter-spacing:.12em;color:var(–gold);opacity:0;animation:fadeUp .8s ease 1.2s forwards}
 .scroll-cue{position:absolute;bottom:20px;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:5px;z-index:2;opacity:0;animation:fadeUp .8s ease 1.5s forwards}
-.scroll-cue span{font-size:9px;letter-spacing:.3em;color:var(--muted);text-transform:uppercase}
-.scroll-bar{width:1px;height:32px;background:linear-gradient(to bottom,var(--gold),transparent);animation:sb 1.8s ease-in-out infinite}
+.scroll-cue span{font-size:9px;letter-spacing:.3em;color:var(–muted);text-transform:uppercase}
+.scroll-bar{width:1px;height:32px;background:linear-gradient(to bottom,var(–gold),transparent);animation:sb 1.8s ease-in-out infinite}
 @keyframes sb{0%,100%{opacity:.3;transform:scaleY(.8)}50%{opacity:1;transform:scaleY(1)}}
 
 /* STRIP */
 .strip{display:flex;height:145px;overflow:hidden;gap:2px}
-.strip img{flex:1;object-fit:cover;filter:brightness(.7) saturate(.82);transition:flex .5s,filter .3s}
-.strip img:hover{flex:2.2;filter:brightness(.88) saturate(1.05)}
+.strip img{flex:1;object-fit:cover;filter:brightness(.7) saturate(.82)}
 
 /* SHARED */
-.sec{padding:56px 20px 8px;max-width:580px;margin:0 auto}
+.sec{padding:36px 20px 8px;max-width:580px;margin:0 auto}
 .sec-eye{display:flex;align-items:center;gap:10px;margin-bottom:22px}
-.sec-eye span{font-size:9px;letter-spacing:.35em;color:var(--gold);text-transform:uppercase;white-space:nowrap}
+.sec-eye span{font-size:9px;letter-spacing:.35em;color:var(–gold);text-transform:uppercase;white-space:nowrap}
 .sec-eye::after{content:'';flex:1;height:1px;background:linear-gradient(to right,rgba(201,169,110,.3),transparent)}
 
 /* WEATHER */
 .wx-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:6px}
-.wx-card{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:10px 4px;text-align:center}
-.wx-label{font-size:8.5px;color:var(--muted);letter-spacing:.06em;margin-bottom:2px}
-.wx-day{font-size:9.5px;color:var(--gold);font-weight:500;margin-bottom:5px}
+.wx-card{background:var(–card);border:1px solid var(–border);border-radius:10px;padding:10px 4px;text-align:center}
+.wx-label{font-size:8.5px;color:var(–muted);letter-spacing:.06em;margin-bottom:2px}
+.wx-day{font-size:9.5px;color:var(–gold);font-weight:500;margin-bottom:5px}
 .wx-icon{font-size:20px;margin-bottom:4px}
-.wx-temp{font-family:'Cormorant Garamond',serif;font-size:17px;color:var(--white)}
-.wx-rain{font-size:8.5px;color:var(--muted);margin-top:3px}
-.wx-note{margin:14px 0 0;font-size:11px;color:var(--muted);line-height:1.85;padding:12px 14px;background:rgba(255,255,255,.025);border-radius:8px;border:1px solid rgba(255,255,255,.05)}
+.wx-temp{font-family:'Cormorant Garamond',serif;font-size:17px;color:var(–white)}
+.wx-rain{font-size:8.5px;color:var(–muted);margin-top:3px}
+.wx-note{margin:14px 0 0;font-size:11px;color:var(–muted);line-height:1.85;padding:12px 14px;background:rgba(255,255,255,.025);border-radius:8px;border:1px solid rgba(255,255,255,.05)}
 
 /* CONVERTER */
-.conv-wrap{padding:32px 20px;max-width:580px;margin:0 auto}
-.conv-card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:22px 20px}
+.conv-wrap{padding:20px 20px;max-width:580px;margin:0 auto}
+.conv-card{background:var(–card);border:1px solid var(–border);border-radius:14px;padding:22px 20px}
 .conv-top{text-align:center;margin-bottom:18px}
-.conv-top small{font-size:10px;letter-spacing:.2em;color:var(--muted);text-transform:uppercase}
-.conv-top strong{display:block;font-family:'Cormorant Garamond',serif;font-size:30px;font-weight:300;color:var(--white);margin-top:4px}
-.conv-top .upd{font-size:10px;color:var(--muted);margin-top:3px}
+.conv-top small{font-size:10px;letter-spacing:.2em;color:var(–muted);text-transform:uppercase}
+.conv-top strong{display:block;font-family:'Cormorant Garamond',serif;font-size:30px;font-weight:300;color:var(–white);margin-top:4px}
+.conv-top .upd{font-size:10px;color:var(–muted);margin-top:3px}
 .conv-tbl{width:100%;border-collapse:collapse;margin-bottom:16px}
-.conv-tbl th{font-size:9px;letter-spacing:.2em;color:var(--muted);text-transform:uppercase;text-align:right;padding:4px 8px;font-weight:400}
+.conv-tbl th{font-size:9px;letter-spacing:.2em;color:var(–muted);text-transform:uppercase;text-align:right;padding:4px 8px;font-weight:400}
 .conv-tbl th:first-child{text-align:left}
-.conv-tbl td{font-size:13px;color:var(--sand);text-align:right;padding:7px 8px;border-top:1px solid rgba(255,255,255,.04)}
-.conv-tbl td:first-child{text-align:left;color:var(--muted);font-size:12px}
+.conv-tbl td{font-size:13px;color:var(–sand);text-align:right;padding:7px 8px;border-top:1px solid rgba(255,255,255,.04)}
+.conv-tbl td:first-child{text-align:left;color:var(–muted);font-size:12px}
 .conv-row{display:flex;gap:8px}
-.conv-row input{flex:1;background:rgba(255,255,255,.06);border:1px solid var(--border);border-radius:8px;padding:10px 12px;color:var(--white);font-size:14px;font-family:'Noto Sans JP',sans-serif;outline:none}
-.conv-row input::placeholder{color:var(--muted)}
-.conv-out{flex:1;background:rgba(201,169,110,.08);border:1px solid rgba(201,169,110,.25);border-radius:8px;padding:10px 12px;color:var(--gold);font-size:14px;display:flex;align-items:center}
+.conv-row input{flex:1;background:rgba(255,255,255,.06);border:1px solid var(–border);border-radius:8px;padding:10px 12px;color:var(–white);font-size:14px;font-family:'Noto Sans JP',sans-serif;outline:none}
+.conv-row input::placeholder{color:var(–muted)}
+.conv-out{flex:1;background:rgba(201,169,110,.08);border:1px solid rgba(201,169,110,.25);border-radius:8px;padding:10px 12px;color:var(–gold);font-size:14px;display:flex;align-items:center}
 
 /* MEMBERS */
 .members-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px}
-.m-card{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:14px 16px;position:relative;overflow:hidden;transition:background .3s}
-.m-card::before{content:'';position:absolute;top:0;left:0;width:2px;height:100%;background:var(--gold);opacity:0;transition:opacity .3s}
+.m-card{background:var(–card);border:1px solid var(–border);border-radius:10px;padding:14px 16px;position:relative;overflow:hidden;transition:background .3s}
+.m-card::before{content:'';position:absolute;top:0;left:0;width:2px;height:100%;background:var(–gold);opacity:0;transition:opacity .3s}
 .m-card:active{background:rgba(201,169,110,.07)}.m-card:active::before{opacity:1}
-.m-jp{font-size:14px;font-weight:500;color:var(--white);letter-spacing:.04em}
-.m-en{font-size:9px;color:var(--muted);letter-spacing:.1em;margin-top:2px}
-.m-tag{display:inline-block;margin-top:6px;font-size:9px;color:var(--gold);border:1px solid rgba(201,169,110,.3);border-radius:4px;padding:1px 6px}
+.m-jp{font-size:14px;font-weight:500;color:var(–white);letter-spacing:.04em}
+.m-en{font-size:9px;color:var(–muted);letter-spacing:.1em;margin-top:2px}
+.m-tag{display:inline-block;margin-top:6px;font-size:9px;color:var(–gold);border:1px solid rgba(201,169,110,.3);border-radius:4px;padding:1px 6px}
 
 /* SCHEDULE */
-.sched{background:linear-gradient(180deg,var(--deep),#0b1512 100%);border-top:1px solid var(--border);margin-top:32px}
-.day-blk{padding:52px 20px 36px;max-width:580px;margin:0 auto}
+.sched{background:linear-gradient(180deg,var(–deep),#0b1512 100%);border-top:1px solid var(–border);margin-top:32px}
+.day-blk{padding:36px 20px 24px;max-width:580px;margin:0 auto}
 .day-blk+.day-blk{border-top:1px solid rgba(201,169,110,.08)}
 .day-photo{width:100%;height:190px;object-fit:cover;border-radius:12px;margin-bottom:26px;filter:brightness(.75) saturate(.82);display:block}
 .day-hdr{display:flex;align-items:flex-start;gap:14px;margin-bottom:28px}
 .day-num{font-family:'Cormorant Garamond',serif;font-size:60px;font-weight:300;line-height:1;color:rgba(201,169,110,.18);letter-spacing:-.04em;flex-shrink:0}
 .day-inf{padding-top:6px}
-.day-title{font-family:'Cormorant Garamond',serif;font-size:22px;color:var(--white);letter-spacing:.03em;line-height:1.2}
-.day-date{font-size:10px;letter-spacing:.18em;color:var(--muted);margin-top:3px;text-transform:uppercase}
+.day-title{font-family:'Cormorant Garamond',serif;font-size:22px;color:var(–white);letter-spacing:.03em;line-height:1.2}
+.day-date{font-size:10px;letter-spacing:.18em;color:var(–muted);margin-top:3px;text-transform:uppercase}
 .tl{position:relative;padding-left:14px}
 .tl::before{content:'';position:absolute;left:0;top:10px;bottom:0;width:1px;background:linear-gradient(to bottom,rgba(201,169,110,.45),rgba(201,169,110,.04))}
 .tl-row{position:relative;padding:0 0 20px 22px}
-.tl-row::before{content:'';position:absolute;left:-4px;top:9px;width:8px;height:8px;border-radius:50%;background:var(--deep);border:1.5px solid rgba(201,169,110,.45)}
-.tl-row.hi::before{background:var(--gold);border-color:var(--gold);width:10px;height:10px;left:-5px;top:8px;box-shadow:0 0 12px rgba(201,169,110,.4)}
-.tl-time{font-family:'Cormorant Garamond',serif;font-size:13px;color:var(--gold);letter-spacing:.08em;margin-bottom:1px}
-.tl-label{font-size:14px;color:var(--sand);line-height:1.55}
-.tl-sub{font-size:11px;color:var(--muted);margin-top:2px;line-height:1.55}
+.tl-row::before{content:'';position:absolute;left:-4px;top:9px;width:8px;height:8px;border-radius:50%;background:var(–deep);border:1.5px solid rgba(201,169,110,.45)}
+.tl-row.hi::before{background:var(–gold);border-color:var(–gold);width:10px;height:10px;left:-5px;top:8px;box-shadow:0 0 12px rgba(201,169,110,.4)}
+.tl-time{font-family:'Cormorant Garamond',serif;font-size:13px;color:var(–gold);letter-spacing:.08em;margin-bottom:1px}
+.tl-label{font-size:14px;color:var(–sand);line-height:1.55}
+.tl-sub{font-size:11px;color:var(–muted);margin-top:2px;line-height:1.55}
 .dinner-card{margin-top:8px;background:linear-gradient(135deg,rgba(212,113,74,.1),rgba(201,169,110,.07));border:1px solid rgba(212,113,74,.28);border-radius:10px;padding:11px 14px}
 .act-card{margin-top:8px;background:rgba(30,61,53,.35);border:1px solid rgba(45,82,73,.6);border-radius:10px;padding:11px 14px}
 .spa-card{margin-top:8px;background:rgba(60,40,80,.28);border:1px solid rgba(120,80,180,.28);border-radius:10px;padding:11px 14px}
 .badge{font-size:8.5px;letter-spacing:.25em;text-transform:uppercase;margin-bottom:4px;display:flex;align-items:center;gap:5px}
-.bd{color:var(--coral)}.bd::before{content:'✦';font-size:7px}
+.bd{color:var(–coral)}.bd::before{content:'✦';font-size:7px}
 .ba{color:#6abfa6}.ba::before{content:'◈';font-size:8px}
 .bs{color:#b8a0d4}.bs::before{content:'◇';font-size:8px}
-.ctitle{font-family:'Cormorant Garamond',serif;font-size:17px;color:var(--white);line-height:1.3}
-.csub{font-size:11px;color:var(--muted);margin-top:4px}
+.ctitle{font-family:'Cormorant Garamond',serif;font-size:17px;color:var(–white);line-height:1.3}
+.csub{font-size:11px;color:var(–muted);margin-top:4px}
 
 /* MAP */
 .map-sec{padding:0 20px 48px;max-width:580px;margin:0 auto}
-.map-wrap{border-radius:14px;overflow:hidden;border:1px solid var(--border);position:relative}
+.map-wrap{border-radius:14px;overflow:hidden;border:1px solid var(–border);position:relative}
 .map-wrap iframe{width:100%;height:320px;border:none;display:block}
-.map-label{position:absolute;bottom:12px;left:12px;background:rgba(10,18,15,.88);color:var(--gold);font-size:10px;letter-spacing:.14em;padding:5px 10px;border-radius:6px;border:1px solid rgba(201,169,110,.25);backdrop-filter:blur(6px);pointer-events:none}
+.map-label{position:absolute;bottom:12px;left:12px;background:rgba(10,18,15,.88);color:var(–gold);font-size:10px;letter-spacing:.14em;padding:5px 10px;border-radius:6px;border:1px solid rgba(201,169,110,.25);backdrop-filter:blur(6px);pointer-events:none}
 
 /* INFO */
-.info-wrap{padding:56px 20px 80px;max-width:580px;margin:0 auto;border-top:1px solid var(--border)}
-.info-card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:20px;margin-bottom:10px}
-.info-card h3{font-size:9px;letter-spacing:.32em;color:var(--gold);text-transform:uppercase;margin-bottom:12px;padding-bottom:10px;border-bottom:1px solid rgba(201,169,110,.1)}
-.info-card p,.info-card li{font-size:13px;color:var(--sand);line-height:1.9}
+.info-wrap{padding:36px 20px 60px;max-width:580px;margin:0 auto;border-top:1px solid var(–border)}
+.info-card{background:var(–card);border:1px solid var(–border);border-radius:12px;padding:20px;margin-bottom:10px}
+.info-card h3{font-size:9px;letter-spacing:.32em;color:var(–gold);text-transform:uppercase;margin-bottom:12px;padding-bottom:10px;border-bottom:1px solid rgba(201,169,110,.1)}
+.info-card p,.info-card li{font-size:13px;color:var(–sand);line-height:1.9}
 .info-card ul{list-style:none;padding:0}
 .info-card li{padding-left:14px;position:relative}
 .info-card li::before{content:'—';position:absolute;left:0;color:rgba(201,169,110,.5);font-size:11px}
 .warn{color:#e8b05a!important}.ng{color:#e07070!important}
+/* WEATHER BRANCH */
+.branch{margin-top:8px;display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.branch-card{border-radius:10px;padding:11px 13px}
+.branch-sun{background:rgba(201,169,110,.08);border:1px solid rgba(201,169,110,.3)}
+.branch-rain{background:rgba(80,120,180,.08);border:1px solid rgba(80,120,180,.3)}
+.branch-icon{font-size:16px;margin-bottom:4px}
+.branch-lbl{font-size:9px;letter-spacing:.18em;text-transform:uppercase;margin-bottom:5px}
+.branch-sun .branch-lbl{color:var(–gold)}
+.branch-rain .branch-lbl{color:#8ab4d8}
+.branch-item{font-size:11.5px;color:var(–sand);line-height:1.65}
+.branch-sub{font-size:10px;color:var(–muted);margin-top:2px;line-height:1.5}
 
 /* FOOTER */
 .footer{display:flex;flex-direction:column;align-items:center;padding:36px 20px 52px;gap:14px;border-top:1px solid rgba(255,255,255,.05)}
 .footer img{height:20px;filter:brightness(0) invert(1);opacity:.28}
-.footer p{font-size:10px;color:var(--muted);letter-spacing:.18em;text-align:center;line-height:2}
+.footer p{font-size:10px;color:var(–muted);letter-spacing:.18em;text-align:center;line-height:2}
 
 @keyframes fadeUp{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
 @keyframes fadeDown{from{opacity:0;transform:translateX(-50%) translateY(-10px)}to{opacity:1;transform:translateX(-50%) translateY(0)}}
 .reveal{opacity:0;transform:translateY(20px);transition:opacity .7s ease,transform .7s ease}
 .reveal.on{opacity:1;transform:none}
 </style>
+
 </head>
 <body>
 
 <!-- HERO -->
+
 <section class="hero">
   <div class="hero-bg"></div>
   <div class="hero-ov"></div>
@@ -152,6 +165,7 @@ body{background:var(--deep);color:var(--sand);font-family:'Noto Sans JP',sans-se
 </section>
 
 <!-- PHOTO STRIP -->
+
 <div class="strip">
   <img src="https://images.unsplash.com/photo-1555400038-63f5ba517a47?w=400&q=75" alt="">
   <img src="https://images.unsplash.com/photo-1573790387438-4da905039392?w=400&q=75" alt="">
@@ -160,6 +174,7 @@ body{background:var(--deep);color:var(--sand);font-family:'Noto Sans JP',sans-se
 </div>
 
 <!-- WEATHER -->
+
 <div class="sec reveal">
   <div class="sec-eye"><span>Weather — 現地天気予報</span></div>
   <div class="wx-grid">
@@ -173,6 +188,7 @@ body{background:var(--deep);color:var(--sand);font-family:'Noto Sans JP',sans-se
 </div>
 
 <!-- CONVERTER -->
+
 <div class="conv-wrap reveal">
   <div class="sec-eye"><span>Exchange Rate — 為替・換算</span></div>
   <div class="conv-card">
@@ -198,22 +214,25 @@ body{background:var(--deep);color:var(--sand);font-family:'Noto Sans JP',sans-se
 </div>
 
 <!-- MEMBERS -->
+
 <div class="sec reveal">
   <div class="sec-eye"><span>Travelers — 参加メンバー</span></div>
   <div class="members-grid">
-    <div class="m-card"><div class="m-jp">内藤 佑規也</div><div class="m-en">Naito Yukiya</div></div>
-    <div class="m-card"><div class="m-jp">成田 達哉</div><div class="m-en">Narita Tatsuya</div></div>
-    <div class="m-card"><div class="m-jp">松井 眞音</div><div class="m-en">Matsui Maon</div></div>
-    <div class="m-card"><div class="m-jp">上司 絢子</div><div class="m-en">Kamitsukasa Ayako</div></div>
-    <div class="m-card"><div class="m-jp">田中 佑樹</div><div class="m-en">Tanaka Yuki</div></div>
-    <div class="m-card"><div class="m-jp">牧野 剛志</div><div class="m-en">Makino Tsuyoshi</div></div>
+    <div class="m-card"><div class="m-jp">内藤 佑規也</div></div>
+    <div class="m-card"><div class="m-jp">成田 達哉</div></div>
+    <div class="m-card"><div class="m-jp">松井 眞音</div></div>
+    <div class="m-card"><div class="m-jp">上司 絢子</div></div>
+    <div class="m-card"><div class="m-jp">田中 佑樹</div></div>
+    <div class="m-card"><div class="m-jp">牧野 剛志</div></div>
   </div>
 </div>
 
 <!-- SCHEDULE -->
+
 <div class="sched">
 
   <!-- DAY 1 -->
+
   <div class="day-blk reveal">
     <img class="day-photo" src="https://images.unsplash.com/photo-1518548419970-58e3b4079ab2?w=800&q=75" alt="">
     <div class="day-hdr"><div class="day-num">01</div><div class="day-inf"><div class="day-title">出発 &amp; 到着</div><div class="day-date">Monday · March 9</div></div></div>
@@ -221,62 +240,101 @@ body{background:var(--deep);color:var(--sand);font-family:'Noto Sans JP',sans-se
       <div class="tl-row"><div class="tl-time">09:00</div><div class="tl-label">成田空港 集合</div><div class="tl-sub">第1ターミナル・出発ロビー</div></div>
       <div class="tl-row"><div class="tl-time">11:00</div><div class="tl-label">成田空港 出発（直行便）</div></div>
       <div class="tl-row"><div class="tl-time">17:30</div><div class="tl-label">デンパサール空港 到着</div><div class="tl-sub">送迎車にてスミニャックへ移動・ホテルチェックイン</div></div>
-      <div class="tl-row hi"><div class="tl-time">19:00</div><div class="tl-label">ディナー</div>
-        <div class="dinner-card"><div class="badge bd">Special Dinner — Day 1</div><div class="ctitle">Kaum Bali</div><div class="csub">6名 / 19:00〜 / ドレスコード：スマートカジュアル<br>📍 Jl. Petitenget No.51B, Seminyak / ☎ +62 361 6207979<br><a href="https://maps.google.com/?q=Kaum+Bali+Jl+Petitenget+No.51B+Seminyak" target="_blank" style="color:var(--gold);text-decoration:none;font-size:11px">🗺 Google Mapで開く</a></div></div>
+      <div class="tl-row hi"><div class="tl-time">19:30</div><div class="tl-label">ディナー</div>
+        <div class="dinner-card"><div class="badge bd">Special Dinner — Day 1</div><div class="ctitle">スミニャック周辺レストラン</div><div class="csub">予約済・詳細後日共有</div></div>
       </div>
     </div>
   </div>
 
   <!-- DAY 2 -->
+
   <div class="day-blk reveal">
     <img class="day-photo" src="https://images.unsplash.com/photo-1544551763-92ab472cad5d?w=800&q=75" alt="">
-    <div class="day-hdr"><div class="day-num">02</div><div class="day-inf"><div class="day-title">フリーデイ</div><div class="day-date">Tuesday · March 10</div></div></div>
+    <div class="day-hdr"><div class="day-num">02</div><div class="day-inf"><div class="day-title">スパ &amp; スミニャック自由時間</div><div class="day-date">Tuesday · March 10</div></div></div>
     <div class="tl">
       <div class="tl-row"><div class="tl-time">07:00 – 08:00</div><div class="tl-label">ホテル朝食</div></div>
-      <div class="tl-row"><div class="tl-time">終日</div><div class="tl-label">自由行動</div><div class="tl-sub">スミニャック周辺でカフェ・ショッピング・スパなど各自で</div></div>
+      <div class="tl-row"><div class="tl-time">08:00 – 10:00</div><div class="tl-label">フリー</div><div class="tl-sub">プール・ビーチ散策・パッキング準備など</div></div>
+      <div class="tl-row hi"><div class="tl-time">10:00 – 13:00</div><div class="tl-label">ホテルスパ</div>
+        <div class="spa-card"><div class="badge bs">Spa — Day 2</div><div class="ctitle">W Bali スパ</div><div class="csub">予約済み・3時間</div></div>
+      </div>
+      <div class="tl-row"><div class="tl-time">13:00 – 14:30</div><div class="tl-label">ランチ</div><div class="tl-sub">スミニャック周辺を散策しながら</div></div>
+      <div class="tl-row hi"><div class="tl-time">14:30 – 18:00</div><div class="tl-label">フリータイム</div>
+        <div class="branch">
+          <div class="branch-card branch-sun">
+            <div class="branch-icon">☀️</div>
+            <div class="branch-lbl">晴れの場合</div>
+            <div class="branch-item">Potato Head Beach Club</div>
+            <div class="branch-sub">プール＋サンセット＋ドリンク<br>バリ屈指のビーチクラブ</div>
+          </div>
+          <div class="branch-card branch-rain">
+            <div class="branch-icon">🌧️</div>
+            <div class="branch-lbl">雨・曇りの場合</div>
+            <div class="branch-item">Seminyak ショッピング</div>
+            <div class="branch-sub">Seminyak Square / Village<br>→ Revolver でコーヒー締め</div>
+          </div>
+        </div>
+      </div>
+      <div class="tl-row"><div class="tl-time">18:00 – 18:30</div><div class="tl-label">ホテルへ戻り・着替え</div></div>
       <div class="tl-row hi"><div class="tl-time">19:00</div><div class="tl-label">ディナー</div>
-        <div class="dinner-card"><div class="badge bd">Special Dinner — Day 2</div><div class="ctitle">Seasalt</div><div class="csub">6名 / 19:00〜 / ドレスコード：カジュアル<br>📍 Jl. Taman Ganesha, Jl. Petitenget No.9, Seminyak / ☎ +62 811-3867-544<br>⚠ 予約時間より20分遅れると自動キャンセル<br><a href="https://maps.google.com/?q=Seasalt+Seminyak+Jl+Petitenget+No.9+Bali" target="_blank" style="color:var(--gold);text-decoration:none;font-size:11px">🗺 Google Mapで開く</a></div></div>
+        <div class="dinner-card"><div class="badge bd">Special Dinner — Day 2</div><div class="ctitle">スミニャック周辺レストラン</div><div class="csub">予約済・詳細後日共有</div></div>
       </div>
     </div>
   </div>
 
   <!-- DAY 3 -->
+
   <div class="day-blk reveal">
     <img class="day-photo" src="https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=800&q=75" alt="">
-    <div class="day-hdr"><div class="day-num">03</div><div class="day-inf"><div class="day-title">バギーツアー</div><div class="day-date">Wednesday · March 11</div></div></div>
+    <div class="day-hdr"><div class="day-num">03</div><div class="day-inf"><div class="day-title">ラフティング</div><div class="day-date">Wednesday · March 11</div></div></div>
     <div class="tl">
-      <div class="tl-row"><div class="tl-time">07:00</div><div class="tl-label">ホテル朝食</div></div>
-      <div class="tl-row"><div class="tl-time">08:00</div><div class="tl-label">ホテルお迎え・出発</div><div class="tl-sub">送迎車でウブド北部へ（約2時間）</div></div>
-      <div class="tl-row hi"><div class="tl-time">10:30</div><div class="tl-label">ATVライド講習 → 走行スタート</div>
-        <div class="act-card"><div class="badge ba">Activity — Day 3</div><div class="ctitle">ATVバギーツアー（約1.5時間）</div><div class="csub">田んぼ・川の中をオフロード走行！途中休憩あり<br>含：送迎・ランチビュッフェ・ドリンク・保険・シャワー・長靴レンタル<br>⚠ 確実に汚れます。着替え一式・汚れてよい服装で参加</div></div>
+      <div class="tl-row"><div class="tl-time">07:00 – 08:00</div><div class="tl-label">ホテル朝食</div></div>
+      <div class="tl-row hi"><div class="tl-time">終日</div><div class="tl-label">アクティビティ</div>
+        <div class="act-card"><div class="badge ba">Activity — Day 3</div><div class="ctitle">ラフティング</div><div class="csub">送迎あり・ランチ付き</div></div>
       </div>
-      <div class="tl-row"><div class="tl-time">12:30</div><div class="tl-label">ランチ（インドネシア料理ビュッフェ）</div></div>
-      <div class="tl-row"><div class="tl-time">15:00</div><div class="tl-label">ツアー終了 → スミニャックへ帰着</div><div class="tl-sub">ホテル到着は17:00頃の見込み</div></div>
+      <div class="tl-row"><div class="tl-time">15:00</div><div class="tl-label">スミニャックへ帰着・自由時間</div></div>
       <div class="tl-row hi"><div class="tl-time">19:00</div><div class="tl-label">ディナー</div>
-        <div class="dinner-card"><div class="badge bd">Special Dinner — Day 3</div><div class="ctitle">FIRE</div><div class="csub">6名 / 19:00〜 / ドレスコード：カジュアル<br>📍 Jalan Petitenget Kerobokan, Seminyak / ☎ +62 817 0015 808<br><a href="https://maps.google.com/?q=FIRE+Restaurant+Jalan+Petitenget+Kerobokan+Seminyak+Bali" target="_blank" style="color:var(--gold);text-decoration:none;font-size:11px">🗺 Google Mapで開く</a></div></div>
+        <div class="dinner-card"><div class="badge bd">Special Dinner — Day 3</div><div class="ctitle">スミニャック周辺レストラン</div><div class="csub">予約済・詳細後日共有</div></div>
       </div>
     </div>
   </div>
 
-  <!-- DAY 4 -->
   <div class="day-blk reveal">
     <img class="day-photo" src="https://images.unsplash.com/photo-1596178065887-1198b6148b2b?w=800&q=75" alt="">
-    <div class="day-hdr"><div class="day-num">04</div><div class="day-inf"><div class="day-title">最終日 &amp; 帰国へ</div><div class="day-date">Thursday · March 12</div></div></div>
+    <div class="day-hdr"><div class="day-num">04</div><div class="day-inf"><div class="day-title">プラナスパ &amp; 帰国へ</div><div class="day-date">Thursday · March 12</div></div></div>
     <div class="tl">
       <div class="tl-row"><div class="tl-time">07:00 – 08:00</div><div class="tl-label">ホテル朝食</div></div>
-      <div class="tl-row"><div class="tl-time">12:00</div><div class="tl-label">ランチ（ホテルレストラン）</div></div>
-      <div class="tl-row"><div class="tl-time">12:30</div><div class="tl-label">チェックアウト</div><div class="tl-sub">荷物はホテルに預けてOK</div></div>
-      <div class="tl-row hi"><div class="tl-time">13:00 – 15:00</div><div class="tl-label">スパ</div>
-        <div class="spa-card"><div class="badge bs">Spa Time</div><div class="ctitle">スパ（要予約）</div><div class="csub">詳細後日共有</div></div>
+      <div class="tl-row"><div class="tl-time">08:00 – 11:30</div><div class="tl-label">フリー</div><div class="tl-sub">プール・最後のバリを満喫・パッキング</div></div>
+      <div class="tl-row"><div class="tl-time">11:30 – 12:00</div><div class="tl-label">チェックアウト</div><div class="tl-sub">荷物はフロントに預けてOK</div></div>
+      <div class="tl-row"><div class="tl-time">12:00 – 13:00</div><div class="tl-label">ランチ &amp; 散策</div><div class="tl-sub">スミニャック周辺を歩きながら</div></div>
+      <div class="tl-row hi"><div class="tl-time">13:00 – 16:00</div><div class="tl-label">Prana Spa</div>
+        <div class="spa-card"><div class="badge bs">Spa — Day 4</div><div class="ctitle">Sun and Moon 180分</div><div class="csub">Prana Spa Seminyak｜スクラブ→ポリッシュ→スチーム→マッサージ→フェイシャル</div></div>
       </div>
-      <div class="tl-row"><div class="tl-time">15:00 – 18:00</div><div class="tl-label">自由時間</div><div class="tl-sub">カフェ / ショッピング / ビーチ散策</div></div>
-      <div class="tl-row"><div class="tl-time">18:00 – 20:00</div><div class="tl-label">ディナー</div><div class="tl-sub">スミニャック周辺・各自またはグループで</div></div>
-      <div class="tl-row"><div class="tl-time">20:00</div><div class="tl-label">送迎車にて空港へ出発</div></div>
+      <div class="tl-row hi"><div class="tl-time">16:00 – 18:00</div><div class="tl-label">フリータイム</div>
+        <div class="branch">
+          <div class="branch-card branch-sun">
+            <div class="branch-icon">☀️</div>
+            <div class="branch-lbl">晴れの場合</div>
+            <div class="branch-item">Seminyak ビーチ散策</div>
+            <div class="branch-sub">スパ後の海風で締め<br>ビーチバーでドリンクも◎</div>
+          </div>
+          <div class="branch-card branch-rain">
+            <div class="branch-icon">🌧️</div>
+            <div class="branch-lbl">雨・曇りの場合</div>
+            <div class="branch-item">ショッピング・カフェ</div>
+            <div class="branch-sub">Seminyak Village / Square<br>最後のお土産まとめ買い</div>
+          </div>
+        </div>
+      </div>
+      <div class="tl-row hi"><div class="tl-time">18:00 – 19:30</div><div class="tl-label">軽夕食</div>
+        <div class="dinner-card"><div class="badge bd">Casual Dinner — Day 4</div><div class="ctitle">スミニャック周辺カジュアルダイニング</div><div class="csub">候補：Motel Mexicola（メキシカン）/ Nook Bali（カフェ飯）</div></div>
+      </div>
+      <div class="tl-row"><div class="tl-time">19:30 – 20:00</div><div class="tl-label">ホテルで荷物ピックアップ → 空港へ出発</div></div>
       <div class="tl-row"><div class="tl-time">21:00 – 0:00</div><div class="tl-label">空港ラウンジ</div><div class="tl-sub">デンパサール空港（翌 00:50 出発まで）</div></div>
     </div>
   </div>
 
   <!-- DAY 5 -->
+
   <div class="day-blk reveal">
     <div class="day-hdr"><div class="day-num">05</div><div class="day-inf"><div class="day-title">帰国</div><div class="day-date">Friday · March 13</div></div></div>
     <div class="tl">
@@ -288,6 +346,7 @@ body{background:var(--deep);color:var(--sand);font-family:'Noto Sans JP',sans-se
 </div>
 
 <!-- MAP -->
+
 <div class="sec reveal" style="padding-bottom:0">
   <div class="sec-eye"><span>Map — ホテル周辺地図</span></div>
 </div>
@@ -299,6 +358,7 @@ body{background:var(--deep);color:var(--sand);font-family:'Noto Sans JP',sans-se
 </div>
 
 <!-- INFO -->
+
 <div class="info-wrap reveal">
   <div class="sec-eye"><span>Information</span></div>
 
@@ -310,20 +370,51 @@ body{background:var(--deep);color:var(--sand);font-family:'Noto Sans JP',sans-se
   </div>
 
   <div class="info-card">
+    <h3>ビザ・入国</h3>
+    <ul>
+      <li>日本国籍はビザ不要（30日以内の滞在は無条件で免除）</li>
+      <li>パスポートの残存有効期限が<span class="warn">6ヶ月以上</span>あることを全員確認</li>
+      <li>入国カードは機内または到着後に記入。宿泊先ホテル名・住所を書く欄あり</li>
+      <li>入国審査：パスポートと入国カードを提出するだけ</li>
+      <li>税関申告書を提出（申告不要なら緑レーン）</li>
+    </ul>
+  </div>
+
+  <div class="info-card">
+    <h3>搭乗・フライト</h3>
+    <ul>
+      <li>チェックインは出発2時間前目安。第1ターミナルで集合</li>
+      <li>液体物は100ml以下・ジップロック1袋にまとめてセキュリティへ</li>
+      <li class="warn">モバイルバッテリーは預け荷物不可。必ず機内持ち込みに</li>
+      <li>両替は成田より現地の方がレートが良い。空港では最小限に</li>
+    </ul>
+  </div>
+
+  <div class="info-card">
+    <h3>到着後・空港で済ませること</h3>
+    <ul>
+      <li>SIMカード：到着ロビーで購入可（Telkomsel / XL推奨、約1,000〜2,000円で1週間）</li>
+      <li>ポケットWi-Fi派は成田空港で事前レンタルも確実</li>
+      <li>両替：空港レートはやや不利。メインはスミニャック市内の公認両替所で</li>
+      <li>Grabアプリは日本で事前インストール・設定しておくとスムーズ</li>
+    </ul>
+  </div>
+
+  <div class="info-card">
     <h3>持ち物チェックリスト</h3>
     <ul>
       <li>パスポート（有効期限6ヶ月以上）</li>
       <li>航空券・eチケット（スマホ or 印刷）</li>
       <li>海外旅行保険証</li>
       <li>現金（円 or USD ／現地でルピアに両替）</li>
-      <li>Wi-Fiルーター or SIMカード（空港でも調達可）</li>
+      <li>Wi-Fiルーター or SIMカード</li>
       <li>日焼け止め・虫除けスプレー</li>
       <li>水着・サンダル</li>
       <li>ラフティング用の着替え（濡れてよい服）</li>
       <li>折りたたみ傘（雨季のため）</li>
       <li>常備薬・胃腸薬・酔い止め</li>
       <li>変換プラグ（バリ：Cタイプ）</li>
-      <li>モバイルバッテリー</li>
+      <li>モバイルバッテリー（機内持ち込み）</li>
       <li>サングラス・帽子</li>
     </ul>
   </div>
@@ -333,34 +424,35 @@ body{background:var(--deep);color:var(--sand);font-family:'Noto Sans JP',sans-se
     <ul>
       <li>バリ島はヒンドゥー教の島。寺院やお供え物（チャナン）を踏まない・蹴らない</li>
       <li class="warn">寺院入場時はサロン（腰巻き）着用が必須。入口で借りられる</li>
+      <li class="warn">寺院では肌の露出を控える。ショートパンツ・タンクトップは避けて</li>
       <li>頭は神聖とされるため、他人の頭に触れるのはNG</li>
       <li>物の受け渡しは右手または両手で（左手は不浄とされる）</li>
-      <li>路地に置かれた小さな花のお供え「チャナン」はまたぐのもNG</li>
-      <li class="warn">寺院では肌の露出を控える。ショートパンツ・タンクトップは避けて</li>
+      <li>路地の花のお供え「チャナン」はまたぐのもNG</li>
+      <li>人前で怒りをあらわにするのはNGとされる（笑顔で対応を）</li>
     </ul>
   </div>
 
   <div class="info-card">
-    <h3>現地でのNG・注意事項</h3>
+    <h3>現地での注意事項</h3>
     <ul>
-      <li class="ng">水道水は飲まない。市販のミネラルウォーターを</li>
-      <li class="ng">屋台・市場の生野菜・生ものは注意</li>
-      <li>チップ文化あり（目安：10,000〜20,000 Rp ≈ 約100〜200円）</li>
+      <li class="ng">水道水は飲まない。歯磨きも市販水推奨</li>
+      <li class="ng">屋台・市場の生野菜・氷・生ものは注意</li>
       <li class="ng">麻薬・ドラッグは厳罰（死刑もあり得る）。絶対にNG</li>
-      <li>人前で怒りをあらわにするのはNGとされる</li>
-      <li>ラフティング・バギー当日は貴重品はホテルに置いていく</li>
+      <li>チップ文化あり（目安：10,000〜20,000 Rp ≈ 約100〜200円）</li>
+      <li>ATMはホテル内が安全。街中はスキミング被害の報告あり</li>
+      <li>タクシーはGrabアプリ利用が安心。流しは値段交渉トラブルあり</li>
       <li>スリに注意。バッグは前抱え、後ろポケットに財布を入れない</li>
+      <li>ラフティング・バギー当日は貴重品はホテルに置いていく</li>
       <li class="warn">日焼けと熱中症に注意。こまめな水分補給を</li>
     </ul>
   </div>
 
   <div class="info-card">
-    <h3>Wi-Fi・通信</h3>
+    <h3>帰国時の注意</h3>
     <ul>
-      <li>W Bali Seminyak はホテル内Wi-Fi完備</li>
-      <li>現地SIMカード：デンパサール空港の到着ロビーで購入可（Telkomsel / XL推奨）</li>
-      <li>ポケットWi-Fi：成田空港でレンタルして持参も確実</li>
-      <li>データ費用目安：1GB ≈ 200〜300円相当（現地SIM）</li>
+      <li>免税範囲：1人あたり20万円以内（酒1L・タバコ200本など別途制限あり）</li>
+      <li class="warn">木製品・植物・食品は日本の検疫対象。持ち込み不可のものあり</li>
+      <li>出国税は現在チケット代に含まれていることが多い（念のため確認を）</li>
     </ul>
   </div>
 
@@ -377,6 +469,7 @@ body{background:var(--deep);color:var(--sand);font-family:'Noto Sans JP',sans-se
 </div>
 
 <!-- FOOTER -->
+
 <div class="footer">
 
   <p>RafLogic BALI TRIP 2026<br>March 9 – 13 &nbsp;✦&nbsp; W Bali Seminyak</p>
@@ -393,5 +486,6 @@ jpyEl.addEventListener('input',()=>{
   idrEl.textContent=(!isNaN(v)&&v>0)?'= '+Math.round(v*107).toLocaleString()+' Rp':'= 0 Rp';
 });
 </script>
+
 </body>
 </html>
